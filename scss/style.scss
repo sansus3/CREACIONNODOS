@@ -28,6 +28,9 @@ ol,li{
 }
 
 .mi-lista{
+    padding: .5em;
+    background-color: white;
+    color: black;
     counter-reset: item;
     &>li{        
         &::before{
@@ -36,9 +39,10 @@ ol,li{
             display: inline-block;
             margin-right: .2em;
         }
-        &>ul{
+        &>ul{            
             counter-reset: sub-item;
             &>li{
+                color: red;
                 &::before{
                     content: counter(item)"."counter(sub-item)"▪";
                     counter-increment: sub-item;
